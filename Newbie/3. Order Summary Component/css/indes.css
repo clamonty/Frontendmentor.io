@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #e0e8ff;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+main .background-mobile {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -35%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .background-desktop {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .background-mobile {
+    display: none;
+  }
+  main .background-desktop {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -35%;
+    z-index: 0;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+main .section-center {
+  width: 90vw;
+  max-width: 375px;
+  height: 75vh;
+  background: white;
+  border-radius: 1rem;
+  z-index: 1;
+}
+main .section-center .summary .img-container .order-img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+main .section-center .summary .content {
+  padding: 2rem;
+  text-align: center;
+}
+main .section-center .summary .content h2 {
+  margin-bottom: 1rem;
+  color: #1f2f56;
+  font-weight: 900;
+}
+main .section-center .summary .content p {
+  line-height: 1.5rem;
+  color: #7280a7;
+  font-weight: 500;
+}
+main .section-center .summary .content .plan-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f5f7ff;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+}
+main .section-center .summary .content .plan-container .plan-btn {
+  justify-self: flex-end;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  color: #3829e0;
+  border-bottom: 2px solid #3829e0;
+}
+main .section-center .summary .content .plan-container .plan-btn:hover {
+  color: #766cea;
+  border-color: #766cea;
+}
+main .section-center .summary .content .payment-btn {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #3829e0;
+  color: white;
+  font-size: inherit;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+main .section-center .summary .content .payment-btn:hover {
+  background-color: #766cea;
+}
+main .section-center .summary .content .cancel-btn {
+  text-decoration: none;
+  color: #7280a7;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+main .section-center .summary .content .cancel-btn:hover {
+  color: #1f2f56;
+}/*# sourceMappingURL=indes.css.map */
