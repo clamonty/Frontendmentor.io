@@ -1,0 +1,144 @@
+@import './colors';
+@import './typography';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background: $primary-main-bg;
+    color: $white;
+    display: flex;
+    align-items: center;
+}
+
+.section-center {
+    width: 95vw;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+
+    .card {
+        border-radius: 0.5rem;
+        max-width: 375px;
+        .card-header {
+            height: 275px;
+            background: url('../images/image-header-mobile.jpg');
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+            background-repeat: no-repeat;
+            
+            .overlay {
+                border-top-left-radius: .5rem;
+                border-top-right-radius: .5rem;
+                height: 100%;
+                width: 100%;
+                background: darken($primary-accent, 25);
+                opacity: 0.65;
+            }
+        }
+
+        .card-body {
+            padding: 2rem;
+            text-align: center;
+            font-family: $font-family-1;
+            background: $primary-card-bg;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            h2 {
+                font-weight:700;
+                margin-bottom: 1rem;
+                
+                span {
+                    color: $primary-accent;
+                }
+            }
+            .main-paragraph {
+                line-height: 1.5rem;
+                color: $main-text;
+                margin-bottom: 3rem;
+            }
+
+            .features-container {
+                display: grid;
+                .feature {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 2rem;
+                    .text-gray {
+                        text-transform: uppercase;
+                        margin-top: 0.5rem;
+                        font-size: 13px;
+                        letter-spacing: 0.1rem;
+                        color: $heading-text;
+                    }
+                }
+                .feature:last-of-type {
+                    margin-bottom: 1rem;
+                }
+
+            }
+            @media screen and (min-width: 1440px) {
+                .features-container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .card {
+            max-width: 1170px;
+            display: flex;
+            flex-direction: row-reverse;
+            
+            .card-header {
+                width: 45%;
+                height: inherit;
+                border-bottom-right-radius: 0.5rem;
+                border-top-left-radius: 0;
+                background: url('../images/image-header-desktop.jpg');
+                background-position: center;
+                background-size: cover;
+                .overlay {
+                    border-top-left-radius: 0;
+                    border-bottom-right-radius: 0.5rem;
+                }
+            }
+            .card-body {
+                text-align: left;
+                padding: 4rem;
+                padding-bottom: 3rem;
+                width: 55%;
+                border-top-left-radius: 0.5rem;
+                border-bottom-right-radius: 0;
+                h2 {
+                    width: 85%;
+                    font-size: 2rem;
+                    margin-bottom: 1.5rem;
+                }
+                .main-paragraph {
+                    width: 85%;
+                    font-size: 15px;
+                }
+
+                .features-container {
+                    width: 90%;
+                    .feature {
+                        margin-bottom: 0;
+                        .text-gray {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
