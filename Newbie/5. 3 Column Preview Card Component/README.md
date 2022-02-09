@@ -37,6 +37,6 @@ More grid practice, with a tiny bit of transition animations.
 
 ## Author
 
-- Github - [clamonty](https://www.your-site.com)
+- Github - [clamonty](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/5.%203%20Column%20Preview%20Card%20Component)
 - Frontend Mentor - [@clamonty](https://clamonty-3-column-preview-card-component.netlify.app/)
 
