@@ -1,0 +1,131 @@
+@import "./colors";
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background: $main-bg;
+}
+
+.section-center {
+    height: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+}
+
+.card {
+    padding: 1.5rem;
+    background: $card-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow:  10px 20px 10px darken($main-bg, 0.5), -10px 20px 10px darken($main-bg, 0.5);
+    .card-img {
+        border-radius: 0.5rem;
+        position: relative;
+        z-index: 1;
+        transition: 0.3s ease all;
+        background-color: $primary-cyan;
+
+        .img {
+            border-radius: 0.5rem;
+            height: 100%;
+            width: 100%;
+            transition: 0.3s ease all;
+        }
+        .icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+        }
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+            .icon {
+                opacity: 1;
+            }
+            .img {
+                opacity: 0.5;
+            }
+            
+        }
+        
+    }
+    .card-content {
+        font-family: $font-family;
+        h2 {
+            color: white;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover {
+                color: $primary-cyan;
+            }
+        }
+        .description-text {
+            color: $primary-light-blue;
+            font-size: $font-size;
+            margin-bottom: 1rem;
+            line-height: 1.8rem;
+            font-weight: 300;
+        }
+
+        .information {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 0.1rem solid $very-dark-blue;
+            .price-info,
+            .time-info {
+                color: $primary-cyan;
+                display: flex; 
+                align-items: center;
+                font-weight: 500;
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+            .time-info {
+                color: $primary-light-blue;
+            }
+        }
+    }
+    .card-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .profile-img {
+            height: 50px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        p {
+            color: $primary-light-blue;
+            font-size: $font-size;
+            font-family: $font-family;
+
+            .author-name {
+                color: $white;
+                text-decoration: none;
+                transition: 0.3s ease all;
+                &:hover {
+                    color: $primary-cyan;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background: #0d192b;
+}
+
+.section-center {
+  height: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+}
+
+.card {
+  padding: 1.5rem;
+  background: #14253d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 10px 20px 10px #0c1729, -10px 20px 10px #0c1729;
+}
+.card .card-img {
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s ease all;
+  background-color: #00fff7;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.card .card-img .img {
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease all;
+}
+.card .card-img .icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.card .card-img:hover .icon {
+  opacity: 1;
+}
+.card .card-img:hover .img {
+  opacity: 0.5;
+}
+.card .card-content {
+  font-family: "Outfit", sans-serif;
+}
+.card .card-content h2 {
+  color: white;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card .card-content h2:hover {
+  color: #00fff7;
+}
+.card .card-content .description-text {
+  color: #8bacda;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  line-height: 1.8rem;
+  font-weight: 300;
+}
+.card .card-content .information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #2f415b;
+}
+.card .card-content .information .price-info,
+.card .card-content .information .time-info {
+  color: #00fff7;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.card .card-content .information .price-info img,
+.card .card-content .information .time-info img {
+  margin-right: 0.5rem;
+}
+.card .card-content .information .time-info {
+  color: #8bacda;
+}
+.card .card-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.card .card-footer .profile-img {
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.card .card-footer p {
+  color: #8bacda;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+.card .card-footer p .author-name {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+.card .card-footer p .author-name:hover {
+  color: #00fff7;
+}/*# sourceMappingURL=index.css.map */
