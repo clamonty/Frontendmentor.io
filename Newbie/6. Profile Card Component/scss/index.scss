@@ -1,0 +1,107 @@
+@import './typography';
+@import './colors';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-content: center;
+    background-color: $dark-cyan;
+    overflow: hidden;
+    .top-img {
+        position: absolute;
+        top: 0;
+        background-size: contain;
+        left: 0;
+        height: 50%;
+        width: 45%;
+        transform: rotate(180deg);
+        background-repeat: no-repeat;
+        background: url('../images/bg-pattern-bottom.svg');
+        overflow: hidden;
+    }
+    .bottom-img {
+        position: absolute;
+        right: 0;
+        background-size: contain;
+        bottom: 0;
+        height: 50%;
+        width: 45%;
+        background-repeat: no-repeat;
+        background: url('../images/bg-pattern-bottom.svg');
+        overflow: hidden;
+    }
+    .section-center {
+        z-index: 1;
+        width: 375px;
+        border-radius: 0.75rem;
+        .card {
+            font-family: $font-family;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 20px 30px 40px rgba(0,0,0,0.1), -20px 30px 40px rgba(0,0,0,0.1);
+            .card-header {
+                height: 150px;
+                width: 100%;
+                background: url('../images/bg-pattern-card.svg');
+                border-top-left-radius: 0.75rem;
+                border-top-right-radius: 0.75rem;
+                position: relative;
+                .profile-img {
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    border-radius: 100%;
+                    border: 4px solid white;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .card-body {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 2rem;
+                border-bottom: 1px solid lighten($dark-gray, 30);
+                h1 {
+                    color: $dark-desaturated-blue;
+                    margin-bottom: 0.5rem;
+                    span {
+                        color: $dark-gray;
+                        font-weight: 500;
+                        margin-left: 0.5rem;
+                    }
+                }
+                p {
+                    color: $dark-gray;
+                    font-size: $font-size;
+                }
+            }
+            .card-footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                place-items: center;
+                padding: 1.25rem;
+                text-align: center;
+                .footer-stat {
+                    h1 {
+                        color: $dark-desaturated-blue;
+                        margin-bottom: 0.2rem;
+                    }
+                    p {
+                        color: $dark-gray;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
