@@ -18,7 +18,7 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/7.%20Single%20Price%20Grid%20Component)
 - Live Site URL: [Add live site URL here](https://clamonty-single-price-grid-component.netlify.app/)
 
 ## My process
