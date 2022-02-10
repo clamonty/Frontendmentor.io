@@ -1,0 +1,170 @@
+@import './typography';
+@import './colors';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $font-family;;
+}
+
+main {
+    padding: 5rem 2rem;
+    background: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg') right;
+    background-repeat: no-repeat;
+}
+
+section {
+    max-width: 650px; 
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    h1 {
+        color: $very-dark-magenta;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        span {
+            font-size: 2.5rem;
+        }
+    }
+    p {
+        color: $dark-grayish-magenta;
+        font-size: 1.15rem;
+        line-height: 1.5rem;
+    }
+    margin-bottom: 2.5rem;
+}
+
+.section-reviews {
+    display: grid;
+    row-gap: 1rem;
+    .review {
+        display: grid;
+        place-items: center;
+        background: $light-grayish-magenta;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        .star-container {
+            img {
+                margin-right: 0.2rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+        p {
+            color: $very-dark-magenta;
+            font-weight: 700;
+            font-size: $font-size;
+        }
+    }
+    margin-bottom: 4rem;
+}
+
+.section-testimonials {
+    display: grid;
+    row-gap: 1rem;
+    .testimonial {
+        background: $very-dark-magenta;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        color: $white;
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            img {
+                border-radius: 50%;
+                display: block;
+                height: 45px;
+                margin-right: 1.5rem;
+            }
+            .name {
+                font-weight: 700;
+                line-height: 1.5rem;
+                font-size: 14px;
+            }
+            .verification {
+                display: block;
+                font-weight: 400;
+                color: $soft-pink;
+            }
+        }
+
+        .testimonial-text {
+            line-height: 1.5rem;
+            color: $light-grayish-magenta;
+        }
+    }
+}
+@media screen and (min-width: 1460px) {
+    main {
+        padding: 5rem;
+        background: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg') right;
+        background-repeat: no-repeat;
+    }
+    .section-center {
+        display: grid;
+        max-width: 1300px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "tl tr tr"
+                             "b b b";
+    }
+    .section-header {
+        text-align: left;
+        grid-area: tl;
+        h1 {
+            font-size: 2.75rem;
+            span {
+                font-size: 3rem;
+            }
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    .section-reviews {
+        grid-area: tr;
+        .review {
+            display: flex;
+            width: 500px;
+            justify-content: space-evenly;
+            align-items: center;
+            .star-container {
+                display: flex;
+                align-items: center;
+                .star-img {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .review:nth-of-type(2) {
+            transform: translateX(10%);
+        }
+        .review:nth-of-type(3) {
+            transform: translateX(20%);
+        }
+
+    }
+    .section-testimonials {
+        grid-area: b;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        place-content: center;
+        justify-items: flex-start;
+        .testimonial {
+            width: calc((1400px / 3) - 4rem);
+        }
+        .testimonial:nth-of-type(2) {
+            transform: translateY(10%);
+        }
+        .testimonial:nth-of-type(3) {
+            transform: translateY(20%)
+        }
+    }
+}
