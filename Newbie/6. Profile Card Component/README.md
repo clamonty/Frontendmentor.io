@@ -17,7 +17,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Github Repo](https://your-solution-url.com)
+- Solution URL: [Github Repo](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/6.%20Profile%20Card%20Component)
 - Live Site URL: [Netlify](https://clamonty-profile-card-component.netlify.app/)
 
 ## My process
