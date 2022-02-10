@@ -18,8 +18,8 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/8.%20Social%20Proof%20Section)
+- Live Site URL: [Netlify](https://clamonty-social-proof-section.netlify.app/)
 
 ## My process
 
