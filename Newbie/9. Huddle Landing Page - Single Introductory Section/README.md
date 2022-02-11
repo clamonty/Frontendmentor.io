@@ -18,7 +18,7 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/9.%20Huddle%20Landing%20Page%20-%20Single%20Introductory%20Section)
 - Live Site URL: [Netlify](https://clamonty-huddle-single-component.netlify.app/)
 ## My process
 
