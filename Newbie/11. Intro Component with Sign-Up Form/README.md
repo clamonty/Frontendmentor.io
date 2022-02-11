@@ -20,7 +20,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/11.%20Intro%20Component%20with%20Sign-Up%20Form)
 - Live Site URL: [Netlify](https://clamonty-intro-with-signup.netlify.app/)
 
 ## My process
