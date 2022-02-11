@@ -1,0 +1,101 @@
+@import './tyopograhpy';
+@import './colors';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $font-family;
+    color: $dark-blue;
+}
+
+main {
+    min-height: 100vh;
+    padding: 5rem 2rem;
+    text-align: center;
+    background: $light-gray;
+}
+
+.section-header {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    h1 {
+        color: $grayish-blue;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-weight: 400;
+        color: $grayish-blue;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.section-cards {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.card {
+    padding: 2rem;
+    background: white;
+    border-radius: .35rem;
+    text-align: left;
+    box-shadow: 2px 10px 20px rgba(0,0,0,0.1), -2px 10px 20px rgba(0,0,0,0.1);
+    border-top: .25rem solid $cyan;
+    max-width: 400px;
+    justify-self: center;
+    .card-text {
+        font-size: 15px;
+        color: $grayish-blue;
+        margin-bottom: 3rem;
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &:nth-of-type(2) {
+        border-color: $red;
+    }
+    &:nth-of-type(3) {
+        border-color: $orange;
+    }
+    &:last-of-type {
+        border-color: $blue;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .section-cards {
+        max-width: 1250px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        column-gap: 1.25rem;
+        grid-template-areas: "supervisor team calculator"
+                             "supervisor karma calculator";
+        
+    }
+    .card {
+        &:first-of-type {
+            grid-area: supervisor;
+            align-self: center;
+        }
+        &:nth-of-type(2) {
+            grid-area: team;
+        }
+        &:nth-of-type(3) {
+            grid-area: karma;
+        }
+        &:last-of-type {
+            grid-area: calculator;
+            align-self: center;
+        }
+    }
+}
