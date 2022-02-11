@@ -19,8 +19,8 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://clamonty-4-card-feature-section.netlify.app/)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/10.%20Four-Card%20Feature%20Section)
+- Live Site URL: [Netlify](https://clamonty-4-card-feature-section.netlify.app/)
 
 ## My process
 
