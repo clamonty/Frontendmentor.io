@@ -1,0 +1,150 @@
+@import './tyopography';
+@import './colors';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $ff;
+    color: white;
+}
+body {
+    min-height: 100vh;
+    background: url('../images/bg-intro-mobile.png') $red;
+}
+main {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.section-header {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    p {
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+}
+.btn {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0px 8px rgba(0,0,0,0.2);
+    background: $blue;
+    text-decoration: none;
+    font-weight: 300;
+    
+}
+.bold {
+    font-weight: 700;
+}
+
+.section-form {
+    padding: 1rem;
+
+
+}
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0px 8px rgba(0,0,0,0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-row {
+    margin-bottom: 1rem;
+    .error-message {
+        color: $red;
+        text-align: right;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 0.2rem;
+    }
+}
+.form-control {
+    border-radius: 0.5rem;
+    border: 1px solid $grayish-blue;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 1rem;
+
+    input {
+    display: block;
+    width: 100%;
+    outline: none;
+    font-weight: 600;
+    font-size: $font-size;
+    border: none;
+    border-radius: 0.5rem;
+    color: $dark-blue;
+    }
+    .error-text {
+        color: $red
+    }
+}
+.hidden {
+    display: none;
+}
+.error {
+    border: 2px solid $red;
+    color: $red;
+}
+.submit-btn {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    background: $green;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    font-size: $font-size;
+    font-weight: 500;
+    box-shadow: inset 0px -4px 0px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background: lighten($green, 10);
+    }
+}
+.legal-text {
+    color: $grayish-blue;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 12px;
+}
+.legal-link {
+    color: $red;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .section-header {
+        align-self: center;
+        justify-self: flex-end;
+        text-align: left;
+        h1 {
+            font-size: 2.75rem;
+            max-width: 32rem;
+            line-height: 3rem;
+        }
+        p {
+            max-width: 33rem;
+        }
+    }
+}

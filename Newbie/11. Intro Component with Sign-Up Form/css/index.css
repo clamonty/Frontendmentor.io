@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  background: url("../images/bg-intro-mobile.png") #ff7a7a;
+}
+
+main {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.section-header {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.section-header h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+.section-header p {
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 1.25rem 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+  background: #6055a5;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.section-form {
+  padding: 1rem;
+}
+
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+.form-row .error-message {
+  color: #ff7a7a;
+  text-align: right;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #b9b6d3;
+  border-radius: 0.5rem;
+  display: flex;
+  padding: 1rem;
+}
+.form-control input {
+  display: block;
+  width: 100%;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 0.5rem;
+  color: #3e3c49;
+}
+.form-control .error-text {
+  color: #ff7a7a;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  border: 2px solid #ff7a7a;
+  color: #ff7a7a;
+}
+
+.submit-btn {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  background: #38cc8c;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: #61d6a3;
+}
+
+.legal-text {
+  color: #b9b6d3;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: 12px;
+}
+
+.legal-link {
+  color: #ff7a7a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    align-self: center;
+    justify-self: flex-end;
+    text-align: left;
+  }
+  .section-header h1 {
+    font-size: 2.75rem;
+    max-width: 32rem;
+    line-height: 3rem;
+  }
+  .section-header p {
+    max-width: 33rem;
+  }
+}/*# sourceMappingURL=index.css.map */
