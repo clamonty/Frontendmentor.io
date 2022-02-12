@@ -19,7 +19,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/12.%20FAQ%20Accordion%20Card)
 - Live Site URL: [Netlify](https://clamonty-faq-accordion.netlify.app/)
 
 ## My process
