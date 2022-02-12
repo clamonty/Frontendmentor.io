@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #af67e9, #6565e7), url("../images/bg-pattern-mobile.svg");
+}
+
+.section-center {
+  max-width: 1170px;
+  padding: 10rem 2rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+}
+
+.faq {
+  background: white;
+  border-radius: 1.3rem;
+  padding: 2rem;
+  max-width: 375px;
+  margin: 0 auto;
+  box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-img-container {
+  position: relative;
+  height: 8rem;
+}
+
+.mobile-faq-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-72%);
+  z-index: 3;
+}
+
+.box-shadow-mobile {
+  width: 100%;
+  transform: translateY(-25%);
+}
+
+.faq-content .bold {
+  color: #1d1e35;
+  font-weight: 700;
+}
+.faq-content h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.faq-content .faq-list-item {
+  list-style: none;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #e7e7e9;
+  font-size: 13px;
+  position: relative;
+}
+.faq-content .faq-list-item .list-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.faq-content .faq-list-item .list-item-header .faq-icon {
+  display: block;
+  width: 0.75rem;
+  height: 0.65rem;
+  cursor: pointer;
+  transition: 0.2s rotate ease;
+}
+.faq-content .faq-list-item .list-item-header .icon-active {
+  transform: rotate(180deg);
+  transition: 0.2s rotate ease;
+}
+.faq-content .faq-list-item .faq-item-text {
+  margin-bottom: 1rem;
+}
+.faq-content .faq-list-item .hidden {
+  display: none;
+}
+
+.desktop-faq-img {
+  display: none;
+}
+
+.box-shadow-desktop {
+  display: none;
+}
+
+.desktop-box {
+  display: none;
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    background: linear-gradient(to bottom, #af67e9, #6565e7), url("../images/bg-pattern-desktop.svg");
+  }
+
+  .faq {
+    max-width: 900px;
+    display: grid;
+    padding-right: 5rem;
+    padding-left: 0;
+    padding-bottom: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .faq h1 {
+    text-align: left;
+  }
+
+  .faq-img-container {
+    position: static;
+    height: 25rem;
+  }
+
+  .desktop-container {
+    position: relative;
+  }
+
+  .desktop-img-container {
+    overflow: hidden;
+  }
+
+  .mobile-faq-img {
+    display: none;
+  }
+
+  .box-shadow-mobile {
+    display: none;
+  }
+
+  .box-shadow-desktop {
+    display: block;
+    position: absolute;
+    height: 40rem;
+    bottom: -120px;
+    left: -270px;
+  }
+
+  .desktop-faq-img {
+    display: block;
+    transform: translateX(-18%);
+  }
+
+  .desktop-box {
+    display: block;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    z-index: 4;
+    bottom: 210px;
+    left: -80px;
+  }
+}/*# sourceMappingURL=index.css.map */
