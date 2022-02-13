@@ -17,7 +17,7 @@ This is a solution to the [Ping coming soon page challenge on Frontend Mentor](h
 
 ### Links
 
-- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/13.%20Ping%20Coming%20Soon%20Page)
 - Live Site URL: [Netlify](https://clamonty-ping-coming-soon.netlify.app/)
 
 ## My process
