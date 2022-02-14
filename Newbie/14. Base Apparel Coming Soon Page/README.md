@@ -17,7 +17,7 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/14.%20Base%20Apparel%20Coming%20Soon%20Page)
 - Live Site URL: [Netlify](https://clamonty-base-apparel-coming-soon.netlify.app/)
 
 ## My process
@@ -33,5 +33,5 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ## Author
 
-- Github - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Github - [Add your name here](https://github.com/clamonty)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/clamonty)
