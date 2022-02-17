@@ -1,0 +1,305 @@
+@import './typography';
+@import './colors';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $ff;
+}
+
+header {
+    padding: 3rem 0;
+    text-align: center; 
+    .logo {
+    height: 2rem;
+    margin-bottom: 3rem;
+    }
+    .hero-image {
+        position: relative;
+        min-height: 160px;
+        .tablet-hero {
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+}
+
+.separator-container {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 120%);
+    
+    .separator {
+        width: 1px;
+        height: 100px;
+        margin: 0 auto;
+        background: #87879D;
+        display: block;
+    }
+    .separator-bubble {
+        border: 1px solid #87879D;
+        border-radius: 100%;
+        width: 60px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+section {
+    padding: 1.5rem;
+    position: relative;
+}
+.section-intro {
+    text-align: center;
+    margin-bottom: 15rem;
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    color: $white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.primary-btn {
+    background: $turqoise;
+    padding: 1rem 3rem;
+    .btn-text-primary {
+        color: #8FE3F9;
+    }
+    &:hover {
+        background: #71C0D4;
+    }
+}
+.secondary-btn {
+    background: $dark-purple;
+    color: $white;
+    .btn-text-secondary {
+        color: $light-purple;
+    }
+    &:hover {
+        background: #B18BDD;
+    }
+}
+
+
+.section-use {
+    text-align: center;
+    margin-bottom: 10rem;
+    position: relative;
+    .separator-container {
+        height: 100px;
+        position: absolute;
+        top: -320px;
+    }
+    .img-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        margin-bottom: 4rem;
+        position: relative;
+
+        .use-img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+    .use-information {
+        .overline {
+            margin-bottom: 1rem;
+        }
+        h4 {
+            margin-bottom: 2rem;
+        }
+    }
+    
+
+}
+.section-experience {
+    padding: 0;
+    background: url('../assets/mobile/image-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+    .footer-overlay {
+        height: 100%;
+        width: 100%;
+        padding: 5rem 2rem;
+        padding-bottom: 3.5rem;
+        background: linear-gradient(rgba(77, 150, 169, 0.8),rgba(77, 150, 169, 0.8));
+        z-index: 0;
+        h4, 
+        p {
+            color: $white;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .separator-container {
+        z-index: 3;
+        bottom: 140%;
+        .separator-bubble {
+            background: $white;
+        }
+    }
+
+}
+@media screen and (min-width: 410px) {
+    .section-experience {
+        .separator-container {
+            bottom: 142%;
+        }
+    }
+}
+@media screen and (min-width: 475px) {
+    .section-experience {
+        .separator-container {
+            bottom: 146%;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    
+    .btn {
+        display: inline-block;
+        margin-right: 1.5rem;
+    }
+    .section-intro {
+        h2,
+        p:not(.separator-bubble) {
+            max-width: 28rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .section-use {
+        .img-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .use-information {
+            h4 {
+                font-size: 40px;
+                line-height: 44px;
+                max-width: 28rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            p {
+                max-width: 35rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .section-experience {
+        background-image: url('../assets/tablet/image-footer.jpg');
+        .separator-container {
+            bottom: 140%;
+        }
+        .footer-overlay {
+            h4 {
+                font-size: 40px;
+                line-height: 44px;
+                max-width: 28rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            p {
+                max-width: 35rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    header {
+        .hero-image {
+            display: none;
+        }
+    }
+    .section-intro {
+        overflow-x: hidden;
+        h2 {
+            font-size: 64px;
+            line-height: 64px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 2%;
+            height: 80%;
+            width: 50%;
+            background-image: url('../assets/desktop/image-hero-left.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+        &::after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            right: 2%;
+            transform: translateY(-75%);
+            height: 80%;
+            width: 50%;
+            background-image: url('../assets/desktop/image-hero-right.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+        }
+    }
+    .section-use {
+        .img-container {
+            max-width: 1170px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .section-experience {
+        background-image: url('../assets/desktop/image-footer.jpg');
+        text-align: left;
+        .footer-grid {
+            display: grid;
+            padding: 2rem 0;
+            max-width: 1170px;
+            margin: 0 auto;
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            h4, p {
+                max-width: 20rem;
+            }
+            .btn {
+                width: 15rem;
+            }
+        }
+        .separator-container {
+            text-align: center;
+            z-index: 3;
+            bottom: 152%;
+            .separator-bubble {
+                background: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+h1 {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 44px;
+  color: #28283d;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 36px;
+  color: #28283d;
+}
+
+p, .btn {
+  font-size: 16px;
+  line-height: 26px;
+  color: #87879D;
+}
+
+.overline {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4d96a9;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+header {
+  padding: 3rem 0;
+  text-align: center;
+}
+header .logo {
+  height: 2rem;
+  margin-bottom: 3rem;
+}
+header .hero-image {
+  position: relative;
+  min-height: 160px;
+}
+header .hero-image .tablet-hero {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.separator-container {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 120%);
+}
+.separator-container .separator {
+  width: 1px;
+  height: 100px;
+  margin: 0 auto;
+  background: #87879D;
+  display: block;
+}
+.separator-container .separator-bubble {
+  border: 1px solid #87879D;
+  border-radius: 100%;
+  width: 60px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 15rem;
+}
+.section-intro h2 {
+  margin-bottom: 1.5rem;
+}
+.section-intro p {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: #fafafa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #4d96a9;
+  padding: 1rem 3rem;
+}
+.primary-btn .btn-text-primary {
+  color: #8FE3F9;
+}
+.primary-btn:hover {
+  background: #71C0D4;
+}
+
+.secondary-btn {
+  background: #855fb1;
+  color: #fafafa;
+}
+.secondary-btn .btn-text-secondary {
+  color: #d9b8ff;
+}
+.secondary-btn:hover {
+  background: #B18BDD;
+}
+
+.section-use {
+  text-align: center;
+  margin-bottom: 10rem;
+  position: relative;
+}
+.section-use .separator-container {
+  height: 100px;
+  position: absolute;
+  top: -320px;
+}
+.section-use .img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+.section-use .img-container .use-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.section-use .use-information .overline {
+  margin-bottom: 1rem;
+}
+.section-use .use-information h4 {
+  margin-bottom: 2rem;
+}
+
+.section-experience {
+  padding: 0;
+  background: url("../assets/mobile/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+}
+.section-experience .footer-overlay {
+  height: 100%;
+  width: 100%;
+  padding: 5rem 2rem;
+  padding-bottom: 3.5rem;
+  background: linear-gradient(rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8));
+  z-index: 0;
+}
+.section-experience .footer-overlay h4,
+.section-experience .footer-overlay p {
+  color: #fafafa;
+  margin-bottom: 1.5rem;
+}
+.section-experience .separator-container {
+  z-index: 3;
+  bottom: 140%;
+}
+.section-experience .separator-container .separator-bubble {
+  background: #fafafa;
+}
+
+@media screen and (min-width: 410px) {
+  .section-experience .separator-container {
+    bottom: 142%;
+  }
+}
+@media screen and (min-width: 475px) {
+  .section-experience .separator-container {
+    bottom: 146%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+
+  .section-intro h2,
+.section-intro p:not(.separator-bubble) {
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-use .img-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .section-use .use-information h4 {
+    font-size: 40px;
+    line-height: 44px;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-use .use-information p {
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  .section-experience {
+    background-image: url("../assets/tablet/image-footer.jpg");
+  }
+  .section-experience .separator-container {
+    bottom: 140%;
+  }
+  .section-experience .footer-overlay h4 {
+    font-size: 40px;
+    line-height: 44px;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-experience .footer-overlay p {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .hero-image {
+    display: none;
+  }
+
+  .section-intro {
+    overflow-x: hidden;
+  }
+  .section-intro h2 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  .section-intro::before {
+    content: "";
+    position: absolute;
+    left: 2%;
+    height: 80%;
+    width: 50%;
+    background-image: url("../assets/desktop/image-hero-left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+  .section-intro::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    right: 2%;
+    transform: translateY(-75%);
+    height: 80%;
+    width: 50%;
+    background-image: url("../assets/desktop/image-hero-right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+
+  .section-use .img-container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-experience {
+    background-image: url("../assets/desktop/image-footer.jpg");
+    text-align: left;
+  }
+  .section-experience .footer-grid {
+    display: grid;
+    padding: 2rem 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-experience .footer-grid h4, .section-experience .footer-grid p {
+    max-width: 20rem;
+  }
+  .section-experience .footer-grid .btn {
+    width: 15rem;
+  }
+  .section-experience .separator-container {
+    text-align: center;
+    z-index: 3;
+    bottom: 152%;
+  }
+  .section-experience .separator-container .separator-bubble {
+    background: #fafafa;
+  }
+}/*# sourceMappingURL=index.css.map */
