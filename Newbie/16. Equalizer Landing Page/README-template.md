@@ -15,7 +15,7 @@ This is a solution to the [Equalizer landing page challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/16.%20Equalizer%20Landing%20Page)
 - Live Site URL: [Netlify](https://clamonty-equalizer-landing-page.netlify.app/)
 
 ## My process
