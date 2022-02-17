@@ -19,8 +19,8 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://clamonty-meet-landing-page.netlify.app/)
-- Live Site URL: [Add live site URL here](https://clamonty-meet-landing-page.netlify.app/)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/17.%20Meet%20Landing%20Page)
+- Live Site URL: [Netlify](https://clamonty-meet-landing-page.netlify.app/)
 
 ## My process
 
@@ -34,5 +34,5 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 
 ## Author
 
-- Website - [clamonty](https://www.your-site.com)
+- Website - [clamonty](https://github.com/clamonty)
 - Frontend Mentor - [@clamonty](https://www.frontendmentor.io/profile/clamonty)
