@@ -1,0 +1,279 @@
+@import './typography';
+@import './colors';
+
+* {
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $ff;
+}
+.hidden {
+    opacity: 0;
+}
+.show {
+    opacity: 1;
+}
+main {
+    min-height: 100vh;
+    background: url('../assets/mobile/image-host.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.overlay {
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    text-align: center;
+    background: rgba(18, 23, 37, 0.9);
+}
+header {
+    margin-bottom: 4rem;
+}
+.info {
+    color: $white;
+    h2 {
+        text-transform: uppercase;
+        font-size: 26px;
+        line-height: 38px;
+        font-weight: 300;
+        color: $main-green;
+        margin-bottom: 3rem;
+        max-width: 38rem;
+        .white-txt {
+            color: $white;
+        }
+    }
+    p {
+        color: $gray-1;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 3rem;
+    }
+}
+
+.brand-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+    margin-bottom: 5rem;
+    .brand {
+        display: block;
+        height: 85%;
+        width: 100%;
+        opacity: 0.5;
+    }
+}
+.form {
+    .error-text {
+            color: $red;
+            margin-top: 1rem;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    .form-control {
+        row-gap: 2rem;
+        display: grid;
+        .email {
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            border: none;
+            background: $gray-7;
+            color: $white;
+            &:focus {
+                border: none;
+                outline: none;
+            }
+            &::placeholder {
+                color: $gray-1;
+                font-size: 14px;
+            }
+        }
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            border: none;
+            background: $main-green;
+            font-weight: bold;
+            font-size: 14px;
+            color: #121725;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+                background: $light-green;
+            }
+        }
+        
+    }
+}
+.tablet-host,
+.desktop-host {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        background-image: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tablet-host {
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        right: 0;
+        width: 30rem;
+        height: 690px;
+    }
+
+    .overlay {
+        padding-top: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        background:rgb(18, 23, 37);
+
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100px;
+            width: 200px;
+            bottom: -1%;
+            left: 50px;
+            z-index: 10;
+            background: url('../assets/desktop/bg-pattern-dots.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    header {
+        text-align: left;
+        padding: 2rem;
+        z-index: 1;
+    }
+    .container {
+        background-color: #121725;
+        z-index: 5;
+        width: 90%;
+        padding: 4rem 2rem;
+        padding-left: 0rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .info {
+        background-color: rgb(18, 23, 37);
+        padding: 0rem;
+        padding-left: 2.5rem;
+        text-align: left;
+        z-index: 3;
+        display: grid;
+        width: 100%;
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 48px;
+            line-height: 56px;
+            z-index: 3;
+            grid-area: heading;
+            width: 100%;
+            order: 1;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 2rem;
+            max-width: 28rem;
+            z-index: 3;
+            order: 2;
+            grid-area: paragraph;
+        }
+        form {
+            z-index: 3;
+            grid-area: form;
+            order: 3;
+            .error-text {
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+            .form-control {
+                max-width: 28rem;
+                position: relative;
+                .email {
+                    position: relative;
+                    padding: 1rem 2rem;
+                    height: 4rem;
+                }   
+                .btn {
+                    position: absolute;
+                    right: 2%;
+                    transform: translateY(15%);
+                }
+            }
+        }
+        .brand-container {
+            margin-bottom: 0;
+            order: 4;
+            z-index: 3;
+            max-width: 35rem;
+            margin-top: 0rem;
+            margin-right: auto;
+            align-self: flex-start;
+            align-self: flex-end;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    header {
+        padding-left: 6.5rem;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100px;
+            width: 500px;
+            right: -14%;
+            bottom: 16.5%;
+            z-index: 10;
+            background: url('../assets/desktop/bg-pattern-dots.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    .overlay {
+        position: relative;
+        &::after{
+            content: '';
+            display: none;
+        }
+    }
+    .info {
+        width: 100%;
+    }
+    .tablet-host {
+        display: none;
+    }
+    .container {
+        max-width: 60%;
+        padding-left: 4rem;
+        height: 600px;
+    }
+    .desktop-host {
+        display: block;
+        position: absolute;
+        top: 5rem;
+        z-index: 1;
+        right: 0;
+        width: 70%;
+        max-width: 60rem;
+        height: 650px;
+    }
+    .info {
+        .brand-container {
+            margin-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+		<title>Frontend Mentor | Pod request access landing page</title>
+	</head>
+	<body>
+		<main>
+			<div class="overlay">
+				<header>
+					<img src="./assets/desktop/logo.svg" alt="logo" class="logo" />
+					<img
+						src="./assets/tablet/image-host.jpg"
+						alt="host"
+						class="tablet-host"
+					/>
+					<img
+						src="/assets/desktop/image-host.jpg"
+						alt="host"
+						class="desktop-host"
+					/>
+				</header>
+				<section class="info">
+					<div class="container">
+						<h2>
+							publish your podcasts <span class="white-txt">everywhere.</span>
+						</h2>
+						<p>
+							Upload your audio to Pod with a single click. We’ll then
+							distribute your podcast to Spotify, Apple Podcasts, Google
+							Podcasts, Pocket Casts and more!
+						</p>
+						<article class="brand-container">
+							<img
+								src="./assets/desktop/spotify.svg"
+								alt="spotify"
+								class="brand"
+							/>
+							<img
+								src="./assets/desktop/apple-podcast.svg"
+								alt="apple podcast"
+								class="brand"
+							/>
+							<img
+								src="./assets/desktop/google-podcasts.svg"
+								alt="google podcasts"
+								class="brand"
+							/>
+							<img
+								src="./assets/desktop/pocket-casts.svg"
+								alt="pocket casts"
+								class="brand"
+							/>
+						</article>
+						<form class="form" novalidate>
+							<div class="form-control">
+								<input type="email" class="email" placeholder="Email Address" />
+								<button class="btn" type="submit">Request Access</button>
+							</div>
+							<p class="error-text hidden">Oops! Please check your email</p>
+						</form>
+					</div>
+				</section>
+				<div class="img-container"></div>
+			</div>
+		</main>
+		<script src="./index.js"></script>
+	</body>
+</html>
