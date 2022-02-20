@@ -19,7 +19,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Newbie/15.%20Article%20Preview%20Component)
 - Live Site URL: [Netlify](https://clamonty-article-preview-component.netlify.app/)
 
 ## My process
