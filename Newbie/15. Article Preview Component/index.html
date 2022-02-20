@@ -12,6 +12,10 @@
 			href="./images/favicon-32x32.png"
 		/>
 		<link rel="stylesheet" href="./css/index.css" />
+		<script
+			src="https://kit.fontawesome.com/68c5ed42bd.js"
+			crossorigin="anonymous"
+		></script>
 		<title>Frontend Mentor | Article preview component</title>
 	</head>
 	<body>
@@ -21,58 +25,50 @@
 					<div class="card-header">
 						<img src="./images/drawers.jpg" alt="drawers" class="hero-img" />
 					</div>
-					<div class="card-body">
-						<h1>
-							Shift the overall look and feel by adding these wonderful touches
-							to furniture in your home
-						</h1>
-						<p>
-							Ever been in a room and felt like something was missing? Perhaps
-							it felt slightly bare and uninviting. I've got some simple tips to
-							help you make any room feel complete
-						</p>
-					</div>
-					<div class="card-footer">
-						<div class="footer-lhs">
-							<img
-								src="./images/avatar-michelle.jpg"
-								alt="michelle appleton"
-								class="profile-picture"
-							/>
-							<div class="user-info">
-								<h4 class="user-name">Michelle Appleton</h4>
-								<p class="date">28 Jun 2020</p>
-							</div>
+					<div class="card-content">
+						<div class="card-body">
+							<h1>
+								Shift the overall look and feel by adding these wonderful
+								touches to furniture in your home
+							</h1>
+							<p>
+								Ever been in a room and felt like something was missing? Perhaps
+								it felt slightly bare and uninviting. I've got some simple tips
+								to help you make any room feel complete
+							</p>
 						</div>
-						<div class="footer-rhs">
-							<button class="share-btn">
+						<div class="card-footer">
+							<div class="footer-lhs">
 								<img
-									src="./images/icon-share.svg"
-									alt="share arrow"
-									class="share-icon"
+									src="./images/avatar-michelle.jpg"
+									alt="michelle appleton"
+									class="profile-picture"
 								/>
-							</button>
-						</div>
-						<div class="share-modal">
-							<div class="share-lhs">
-								<p>share</p>
-								<a href="http://www.facebook.com" class="social-link"
-									><img src="./images/icon-facebook.svg" alt="facebook"
-								/></a>
-								<a href="https://twitter.com/" class="social-link"
-									><img src="./images/icon-twitter.svg" alt="twitter"
-								/></a>
-								<a href="https://www.pinterest.ca/" class="social-link"
-									><img src="./images/icon-pinterest.svg" alt="pinterest"
-								/></a>
+								<div class="user-info">
+									<h4 class="user-name">Michelle Appleton</h4>
+									<p class="date">28 Jun 2020</p>
+								</div>
 							</div>
-							<div class="share-rhs">
-								<button class="share-btn close-share">
-									<img
-										src="./images/icon-share.svg"
-										alt="share arrow"
-										class="share-icon"
-									/>
+							<div class="footer-rhs">
+								<button class="share-btn show-btn">
+									<i class="fas fa-share share-icon-light"></i>
+								</button>
+							</div>
+							<div class="share-modal hidden">
+								<p>share</p>
+								<div class="social-icons">
+									<a href="https://www.facebook.com/" class="social-icon">
+										<i class="fab fa-facebook-square"></i>
+									</a>
+									<a href="https://twitter.com/" class="social-icon">
+										<i class="fab fa-twitter"></i>
+									</a>
+									<a href="https://www.pinterest.ca/" class="social-icon">
+										<i class="fab fa-pinterest"></i>
+									</a>
+								</div>
+								<button class="share-btn hide-btn dark-btn">
+									<i class="fas fa-share share-icon-dark"></i>
 								</button>
 							</div>
 						</div>
@@ -80,5 +76,6 @@
 				</article>
 			</section>
 		</main>
+		<script src="./index.js"></script>
 	</body>
 </html>

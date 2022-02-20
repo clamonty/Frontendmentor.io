@@ -31,13 +31,14 @@ main {
 	border-top-right-radius: 1rem;
 	display: block;
 	width: 100%;
-	height: 14rem;
+	height: 16rem;
 	object-fit: cover;
 	object-position: top;
 }
 
 .card-body {
-	padding: 3rem 2rem;
+	padding: 2rem 2rem;
+	padding-bottom: 1rem;
 	h1 {
 		color: $very-dark-grayish-blue;
 		margin-bottom: 1rem;
@@ -55,7 +56,7 @@ main {
 	justify-content: space-between;
     position: relative;
     padding: 1rem 2rem;
-
+	overflow-y: hidden;
 	.footer-lhs {
         padding-bottom: 0;
 		display: flex;
@@ -75,51 +76,127 @@ main {
 			margin-right: 1rem;
 		}
 	}
-
 	.footer-rhs {
         padding-bottom: 0;
-
 	}
-
 }
 .share-btn {
-    display: block;
-    background: darken($light-grayish-blue, 5);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-.share-modal {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    align-items: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    background: $very-dark-grayish-blue;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+			padding: .5rem;
+			width: 35px;
+			border-radius: 50%;
+			border: none;
+			background: $light-grayish-blue;
+			cursor: pointer;
+		}
+		.share-icon-light {
+			color: $desaturated-dark-blue;
+			font-size: 1.2rem;
+		}
 
-    .share-lhs {
-        display: flex;
-        align-items: center;
-        p {
-            text-transform: uppercase;
-            letter-spacing: 0.2rem;
-            color: $grayish-blue;
-            font-size: 13px;
-            margin-right: 2rem;
-        }
-        .social-link {
-            margin-right: 1rem;
-            display: grid;
-            place-items: center;
-            cursor: pointer;
-        }
-    }
+.share-modal {
+	background: $very-dark-grayish-blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	border-bottom-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	transition: 0.3s all ease;
+	transform: translateY(0%);
+	p {
+		color: $grayish-blue;
+		text-transform: uppercase;
+		letter-spacing: .4rem;
+		opacity: 0.8;
+	}
+	.share-btn {
+		justify-self: flex-end;
+	}
+
+	.social-icon {
+		text-decoration: none;
+		color: $light-grayish-blue;
+		font-size: 22px;
+		margin-right: 0.75rem;
+	}
+}
+.share-icon-dark {
+	color: $light-grayish-blue;
+	font-size: 1.2rem;
+}
+.dark-btn {
+	background: $desaturated-dark-blue;
+}
+.hidden {
+	transform: translateY(-100%);
+}
+
+@media screen and (min-width: 1400px) {
+	main {
+		display: grid;
+		place-items: center;
+	}
+	.card {
+		display: grid;
+		max-width: 800px;
+		grid-template-columns: 1fr 1.3fr;
+		grid-template-areas: "card_image card_content";
+	}
+
+	.card-header {
+		grid-area: card_image;
+		.hero-img {
+			height: 100%;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 1rem;
+			object-position: center;
+		}
+	}
+	.card-content {
+		grid-area: card_content;
+	}
+
+	.card-footer {
+		overflow: visible;
+	}
+	.share-modal {
+		width: 300px;
+		height: 65px;
+		display: flex;
+		justify-content: center;
+		border-radius: .5rem;
+		transform: translate(253px, -75px);
+		box-shadow: 0px 10px 20px rgba(72, 85, 106, 0.2);
+		&::before {
+			content: '';
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 15px solid $very-dark-grayish-blue;
+			border-bottom: 0 solid $very-dark-grayish-blue;
+			right: 135px;
+			bottom: -14px;
+		}
+		p {
+			margin-right: 1rem;
+		}
+		.social-icon {
+			font-size: 1.75rem;
+		}
+		.hide-btn {
+			display: none;
+		}
+	}
+	.hidden {
+		transform: translate(180%, -75px);
+		opacity: 0;
+	}
 }
