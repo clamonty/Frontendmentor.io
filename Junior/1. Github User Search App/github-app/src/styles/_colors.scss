@@ -1,0 +1,38 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+$ff: 'Space Mono', monospace;
+
+// Light Mode Colors
+$lm-blue: #0079ff;
+$lm-gray: #697c9a;
+$lm-darkBlue: #4b6a9b;
+$lm-darkGray: #2b3442;
+$lm-lightGray: #f6f8ff;
+$lm-white: #fefefe;
+
+// Dark Mode Colors
+$dm-blue: #0079ff;
+$dm-white: #fff;
+$dm-darkGray: #141d2f;
+$dm-darkBlue: #1e2a47;
+
+// Typography
+$h1-size: 26px;
+$h1-height: 38px;
+$h1-weight: 700;
+
+$h2-size: 22px;
+$h2-height: 33px;
+$h2-weight: 700;
+
+$h3-size: 16px;
+$h3-height: 24px;
+$h3-weight: 400;
+
+$h4-size: 13px;
+$h4-height: 20px;
+$h4-weight: 400;
+
+$body-size: 15px;
+$body-height: 25px;
+$body-weight: 400;

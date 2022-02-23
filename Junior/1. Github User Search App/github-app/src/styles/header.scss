@@ -1,0 +1,40 @@
+@import './colors';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__title.lm {
+    color: $lm-darkGray;
+}
+.header__title.dm {
+    color: $dm-white;
+}
+
+.header__toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header__toggle--span {
+    text-transform: uppercase;
+    font-size: $body-size;
+    font-weight: 700;
+}
+.header__toggle--span.lm {
+    color: $lm-darkBlue;
+}
+.header__toggle--span.dm {
+    color: $dm-white;
+}
+
+.header__toggle--img {
+    margin-left: 2rem;
+}
+.header__toggle--btn {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

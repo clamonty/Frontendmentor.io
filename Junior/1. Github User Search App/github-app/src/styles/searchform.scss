@@ -1,0 +1,58 @@
+@import './colors';
+
+.formContainer {
+    padding: .5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 1rem;
+}
+.formContainer.lm {
+    background-color: $lm-white;
+}
+.formContainer.dm {
+    background-color: $dm-darkBlue;
+}
+.formContainer__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formContainer__form--form-control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.formContainer__form--form-img {
+    margin-right: .5rem;
+}
+.formContainer__form--btn {
+    padding: .75rem 1rem;
+    text-transform: capitalize;
+    font-family: $ff;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background: $lm-blue;
+    cursor: pointer;
+}
+.formContainer__form--btn.lm {
+    color: $lm-lightGray;
+}
+.formContainer__form--btn.dm {
+    color: $dm-white;
+}
+.formContainer__form--input {
+    outline: none;
+    border: none;
+    width: 12.5rem;
+    font-size: 13px;
+    &::placeholder {
+        font-family: $ff;
+    }
+}
+.formContainer__form--input.dm {
+    background: $dm-darkBlue;
+    color: $dm-white;
+    &::placeholder {
+        color: $dm-white;
+    }
+}
