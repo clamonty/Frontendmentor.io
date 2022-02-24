@@ -4,6 +4,11 @@
     padding: .5rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 1rem;
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
 }
 .formContainer.lm {
     background-color: $lm-white;
@@ -12,20 +17,34 @@
     background-color: $dm-darkBlue;
 }
 .formContainer__form {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 5rem;
+    position: relative;
 }
-
+.formContainer__form--error {
+    position: absolute;
+    font-size: 13px;
+    color: #F74646;
+    text-align: center;
+    text-transform: capitalize;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(225%);
+}
 .formContainer__form--form-control {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2rem auto;
     align-items: center;
-    justify-content: flex-start;
 }
 .formContainer__form--form-img {
     margin-right: .5rem;
 }
+
 .formContainer__form--btn {
-    padding: .75rem 1rem;
+    padding: .75rem 0rem;
     text-transform: capitalize;
     font-family: $ff;
     border: none;
@@ -33,6 +52,11 @@
     border-radius: 0.5rem;
     background: $lm-blue;
     cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background: lighten($lm-blue, 10);
+    }
+
 }
 .formContainer__form--btn.lm {
     color: $lm-lightGray;
@@ -43,16 +67,38 @@
 .formContainer__form--input {
     outline: none;
     border: none;
-    width: 12.5rem;
+    justify-self: stretch;
     font-size: 13px;
     &::placeholder {
         font-family: $ff;
     }
+
 }
 .formContainer__form--input.dm {
     background: $dm-darkBlue;
     color: $dm-white;
     &::placeholder {
         color: $dm-white;
+    }
+}
+
+@media (min-width: 768px) {
+    .formContainer {
+        padding-left: 1.5rem;
+    }
+    .formContainer__form {
+        display: grid;
+        grid-template-columns: auto 7rem;
+    }
+    .formContainer__form--btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
+@media (min-width: 875px ) {
+    .formContainer__form--error {
+        margin-left: 0;
+        margin-right: 0;
+
+        transform: translate(13rem, -5%);
     }
 }

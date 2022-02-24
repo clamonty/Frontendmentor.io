@@ -1,8 +1,9 @@
 import React from "react";
 import "../styles/header.scss";
+import { FaSun, FaMoon } from "react-icons/fa";
 const Header = ({ isLight, setIsLight }) => {
 	return (
-		<header className="header lm">
+		<header className="header">
 			<h1 className={`header__title ${isLight ? "lm" : "dm"}`} lm>
 				devfinder
 			</h1>
@@ -14,11 +15,11 @@ const Header = ({ isLight, setIsLight }) => {
 					onClick={() => setIsLight(!isLight)}
 					className="header__toggle--btn"
 				>
-					<img
-						src={isLight ? "./assets/icon-moon.svg" : "./assets/icon-sun.svg"}
-						alt="light mode toggle"
-						className={`header__toggle--img ${isLight ? "lm" : "dm"}`}
-					/>
+					{isLight ? (
+						<FaMoon className="header__toggle--icon lm" />
+					) : (
+						<FaSun className="header__toggle--icon dm" />
+					)}
 				</button>
 			</div>
 		</header>

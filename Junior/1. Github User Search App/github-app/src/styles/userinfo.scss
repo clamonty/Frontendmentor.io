@@ -3,10 +3,16 @@
 .userInfo {
     margin-top: 1rem;
     border-radius: 1rem;
-    padding: 2rem 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .userInfo.lm {
     background: $lm-white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
 }
 .userInfo.dm {
     background: $dm-darkBlue;
@@ -14,6 +20,7 @@
 
 .userInfo__header {
     display: flex; 
+    flex-wrap: wrap;
     align-items: center;
 }
 .userInfo__header--avatar {
@@ -59,8 +66,7 @@
 }
 .userInfo__body {
     display: grid;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem 1rem;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -73,7 +79,7 @@
 }
 
 .userInfo__body--item {
-    text-align: center;
+    text-align: left;
 }
 .userInfo__body--itemTitle {
     font-size: 13px;
@@ -99,15 +105,94 @@
     display: flex;
     align-items: center;
 }
-.userInfo__footer--itemImg {
+.userInfo__footer--icon {
     margin-right: 1rem;
 }
-.userInfo__footer--itemImg.dm {
+.userInfo__footer--icon.lm {
+    color: $lm-darkBlue;
+}
+.userInfo__footer--icon.dm {
     color: $dm-white;
+}
+.userInfo__footer--icon.unavailable {
+    color: $lm-gray;
 }
 .userInfo__footer--itemText.lm {
     color: $lm-darkBlue;
 }
 .userInfo__footer--itemText.dm {
     color: $dm-white;
+}
+.userInfo__footer--itemText.unavailable {
+    color: $lm-gray;
+}
+a.userInfo__footer--itemLink {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 768px) {
+    .userInfo {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem 3rem;
+    }
+    .userInfo__body {
+        padding: 1rem 4rem;
+    }
+    .userInfo__footer {
+        width: 75%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1400px) {
+    .userInfo__header--info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "name date"
+                             "handle handle"
+                             "bio bio";
+        justify-items: space-between;
+        align-items: flex-start;
+        .userInfo__header--name {
+            grid-area: name;
+            transform: translateY(-1.9rem);
+        }
+        .userInfo__header--twitter {
+            grid-area: handle;
+            transform: translateY(-1.9rem);
+        }
+        .userInfo__header--joinDate {
+            grid-area: date;
+            justify-self: flex-end;
+            transform: translate(15rem, -1.5rem);
+        }
+
+    }
+    .userInfo__header--avatar {
+        height: 8rem;
+    }
+    .userInfo__aboutText {
+        width: 79.5%;
+        margin-left: auto;
+        margin-top: -3rem;
+    }
+    .userInfo__body {
+        margin-top: 3rem;
+        margin-left: auto;
+        width: 79.5%;
+    }
+    .userInfo__footer {
+        margin-left: auto;
+        width: 79.5%;
+    }
+
+
 }

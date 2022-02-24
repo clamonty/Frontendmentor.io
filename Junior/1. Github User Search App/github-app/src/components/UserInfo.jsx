@@ -1,13 +1,7 @@
 import "../styles/userinfo.scss";
 import dateFormat from "dateformat";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faLocation,
-	faLink,
-	faBuilding,
-	faTwitter,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaTwitter, FaLink, FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
 
 const UserInfo = ({ isLight, user }) => {
 	const dateObj = new Date(user.created_at);
@@ -38,8 +32,8 @@ const UserInfo = ({ isLight, user }) => {
 						Joined {dateString}
 					</p>
 				</div>
+				<p className={`userInfo__aboutText ${isLight ? "lm" : "dm"}`}>{bio}</p>
 			</header>
-			<p className={`userInfo__aboutText ${isLight ? "lm" : "dm"}`}>{bio}</p>
 			<div className={`userInfo__body ${isLight ? "lm" : "dm"}`}>
 				<div className={`userInfo__body--item ${isLight ? "lm" : "dm"}`}>
 					<p className={`userInfo__body--itemTitle ${isLight ? "lm" : "dm"}`}>
@@ -68,39 +62,66 @@ const UserInfo = ({ isLight, user }) => {
 			</div>
 			<footer className={`userInfo__footer ${isLight ? "lm" : "dm"}`}>
 				<div className={`userInfo__footer--item ${isLight ? "lm" : "dm"}`}>
-					<FontAwesomeIcon icon="fa-solid fa-location-dot" />
-					<p className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"}`}>
-						{user.location}
+					<FaMapMarkerAlt
+						class={`userInfo__footer--icon ${isLight ? "lm" : "dm"} ${
+							user.location ? "" : "unavailable"
+						}`}
+					/>
+
+					<p
+						className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"} ${
+							user.location ? "" : "unavailable"
+						}`}
+					>
+						{user.location || "Not Available"}
 					</p>
 				</div>
 				<div className={`userInfo__footer--item ${isLight ? "lm" : "dm"}`}>
-					<img
-						className={`userInfo__footer--itemImg ${isLight ? "lm" : "dm"}`}
-						src="./assets/icon-website.svg"
-						alt="website link"
+					<FaLink
+						class={`userInfo__footer--icon ${isLight ? "lm" : "dm"} ${
+							user.blog ? "" : "unavailable"
+						}`}
 					/>
-					<p className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"}`}>
-						{user.blog}
+
+					<p
+						className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"} ${
+							user.blog ? "" : "unavailable"
+						}`}
+					>
+						<a
+							className={`userInfo__footer--itemLink ${isLight ? "lm" : "dm"}`}
+							href={user.blog}
+						>
+							{user.blog || "Not Available"}
+						</a>
 					</p>
 				</div>
 				<div className={`userInfo__footer--item ${isLight ? "lm" : "dm"}`}>
-					<img
-						className={`userInfo__footer--itemImg ${isLight ? "lm" : "dm"}`}
-						src="./assets/icon-twitter.svg"
-						alt="twitter logo"
+					<FaTwitter
+						class={`userInfo__footer--icon ${isLight ? "lm" : "dm"} ${
+							user.twitter_username ? "" : "unavailable"
+						}`}
 					/>
-					<p className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"}`}>
+					<p
+						className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"} ${
+							user.twitter_username ? "" : "unavailable"
+						}`}
+					>
 						{user.twitter_username || "Not Available"}
 					</p>
 				</div>
 				<div className={`userInfo__footer--item ${isLight ? "lm" : "dm"}`}>
-					<img
-						className={`userInfo__footer--itemImg ${isLight ? "lm" : "dm"}`}
-						src="./assets/icon-company.svg"
-						alt="company"
+					<FaBuilding
+						class={`userInfo__footer--icon ${isLight ? "lm" : "dm"} ${
+							user.company ? "" : "unavailable"
+						}`}
 					/>
-					<p className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"}`}>
-						{user.company}
+					<p
+						className={`userInfo__footer--itemText ${isLight ? "lm" : "dm"} ${
+							user.company ? "" : "unavailable"
+						}`}
+					>
+						{user.company || "Not Available"}
 					</p>
 				</div>
 			</footer>
