@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<main>
+			<img src="./images/logo.svg" alt="logo" class="logo" />
+			<section class="section-center">
+				<div class="grid-1">
+					<article class="bill-amount">
+						<div class="text-container">
+							<h2 class="label">Bill</h2>
+							<p class="error-text bill-error hidden">Can't be negative</p>
+						</div>
+						<div class="input-control number-control bill-control">
+							<img
+								class="icon dollar-icon"
+								src="./images/icon-dollar.svg"
+								alt="dollar sign"
+							/>
+							<input
+								type="number"
+								name="bill"
+								id="bill"
+								class="bill-input"
+								placeholder="0"
+							/>
+						</div>
+					</article>
+					<article class="tip-percentage">
+						<h2 class="label">Select Tip %</h2>
+						<div class="tip-control">
+							<button
+								class="tip-btn"
+								id="btn-5"
+								data-percent="5"
+								data-checked="false"
+							>
+								5%
+							</button>
+							<button
+								class="tip-btn"
+								id="btn-10"
+								data-percent="10"
+								data-checked="false"
+							>
+								10%
+							</button>
+							<button
+								class="tip-btn"
+								id="btn-15"
+								data-percent="15"
+								data-checked="false"
+							>
+								15%
+							</button>
+							<button
+								class="tip-btn"
+								id="btn-25"
+								data-percent="25"
+								data-checked="true"
+							>
+								25%
+							</button>
+							<button
+								class="tip-btn"
+								id="btn-50"
+								data-percent="50"
+								data-checked="false"
+							>
+								50%
+							</button>
+							<input
+								class="tip-btn custom-tip"
+								type="number"
+								name="custom-percent"
+								id="custom-percent"
+								placeholder="Custom"
+								data-checked="false"
+								data-percent="0"
+							/>
+						</div>
+					</article>
+					<article class="people-amount">
+						<div class="text-container">
+							<h2 class="label">Number of People</h2>
+							<p class="error-text people-error hidden">
+								Must be greater than zero
+							</p>
+						</div>
+
+						<div class="input-control people-control number-control error">
+							<img
+								src="./images/icon-person.svg"
+								alt="person icon"
+								class="icon person-icon"
+							/>
+							<input
+								type="number"
+								name="people"
+								id="people"
+								class="people-input"
+								placeholder="1"
+							/>
+						</div>
+					</article>
+				</div>
+				<div class="grid-2">
+					<article class="tip-amount">
+						<div class="tip-row">
+							<h2 class="tip-label">Tip Amount <span>/ person</span></h2>
+							<p class="price-label tip-person">$0.00</p>
+						</div>
+						<div class="tip-row">
+							<h2 class="tip-label">Total <span>/ person</span></h2>
+							<p class="price-label total-person">$0.00</p>
+						</div>
+						<button class="btn reset-btn">reset</button>
+					</article>
+				</div>
+			</section>
+		</main>
+		<script src="./index.js"></script>
+	</body>
+</html>
