@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/clamonty/Frontendmentor.io/tree/main/Junior/5.%20Tip%20Calculator)
 - Live Site URL: [Netlify](https://clamonty-splitter.netlify.app/)
 
 ## My process
@@ -43,5 +43,5 @@ Users should be able to:
 
 ## Author
 
-- Github - [clamonty](https://www.your-site.com)
+- Github - [clamonty](https://github.com/clamonty/)
 - Frontend Mentor - [@clamonty](https://www.frontendmentor.io/profile/yourusername)
